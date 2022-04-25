@@ -1,14 +1,13 @@
-<% if @list.create %>
-  <p id = "notice">Book was successfully created.</p>
-<% end %>
+
+<p id = "notice"><%= notice %></p>
 <p>
 <strong>Title:</strong>
-<%= @list.title %>
+<%= @book.title %>
 </p>
 <p>
   <strong>Body:</strong>
-  <%= @list.body %>
+  <%= @book.body %>
 </p>
 
-<%= link_to "Edit", "/books/#{@list.id}/edit" %> | 
+<%= link_to "Edit", edit_book_path(@book.id) %> | 
 <%= link_to "Back", "/books" %>
